@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ | Chengyu の 博客</title>
+    <link rel="icon" href="./icons/logo.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/prism.css">
+</head>
+
+<body>
+    <div class="ghost"></div>
+
+    <div class="header">
+        <a href="../../index.html">
+            <p style="font-size: larger">Chengyu の 博客</p>
+        </a>
+        <a href="../../welcome.html">概览</a>
+        <br />
+        <b> · </b>
+        <a href="../html/index.html">前端三剑客</a>
+        <br />
+        <b> · </b>
+        <a href="./index.html">C++</a>
+        <br />
+        <b> · </b>
+        <a href="../java/index.html">Java</a>
+        <p></p>
+    </div>
+    <div class="outer-block">
+        <h2>一 &nbsp; &nbsp;开始吧！</h2>
+        <i>「 始めよければ半ばよし 」</i>
+        <h3>目录</h3>
+        <ol type="1">
+            <li><a href="#p1">C++ 简介</a></li>
+            <li>
+                <a href="#p2">
+                    MinGW
+                    <ol type="1">
+                        <li><a href="#p21">下载 MinGW-w64</a></li>
+                        <li><a href="#p22">让系统“看见”</a></li>
+                    </ol>
+                </a>
+            </li>
+            <li>
+                <a href="#p3">
+                    VS Code
+                    <ol type="1">
+                        <li><a href="#p31">下载 VS Code</a></li>
+                    </ol>
+                </a>
+            </li>
+        </ol>
+        <h3 id="p1">C++ 简介</h3>
+        <i style="color: #aaa;">“ C++ 是一种被广泛使用的计算机程序设计语言。它是一种通用程序设计语言，支持多重编程范式，例如过程化程序设计、面向对象程序设计、泛型程序设计和函数式程序设计等。”</i>
+        <p style="text-align: right;"><a href="https://zh.wikipedia.org/zh-cn/C++">—— 维基百科</a></p>
+        <p>C++ 是一种十分先进的编程语言。在接下来的课程中，你应该会接触到 C++ 大多数有趣的内容（<del>无趣的我都不会写</del>）。而在你正式开始使用 C++ 之前，你需要知道是，C++
+            编写的程序需要编译器进行编译后运行。所以，我们今天的任务就是 —— 装好编译器与文本编辑器。祝你顺利！</p>
+        <h3 id="p2">MinGW-w64</h3>
+        <p>这是 C++ 较为著名的编译器。为何我并不推荐使用 clang 和 MSVC 呢？因为<del>我也不会用</del>MinGW 的安装过程较为简便。</p>
+        <b>注意：初次安装请务必仔细跟随我的步伐，请勿私自操作！</b>
+        <h3 id="p21">第一步：下载 MinGW-w64</h3>
+        <b>Tips：如果你的电脑是 32 位系统，请自行搜索解决方案！</b>
+        <p>打开 SourceForge 中的 MinGW-w64</p>
+        <figure>
+            <img src="../../images/cpp0101.png" />
+            <small><br />图 1：注意不要选错</small>
+        </figure>
+        <p>如图 1，请选择“SourceForge”网站而非首位的官网（<del>官网看不懂</del>）。进入后，请按照图 2、图 3 所示，选择 Files 并下滑找到“MinGW-W64 GCC-8.1.0”字样。</p>
+        <figure>
+            <img src="../../images/cpp0102.png" />
+            <small><br />图 2：选择“Files”</small>
+            <p></p>
+            <img src="../../images/cpp0103.png" />
+            <small><br />图 3：下滑至“MinGW-W64 GCC-8.1.0”</small>
+        </figure>
+        <p>如果你的电脑比较新，选择“x86_64-win32-seh”，详细信息可以自行搜索。此处我将以“x86_64-win32-seh”为实例演示，其它版本大致相同。</p>
+        <b>Tips：SourceForge 的服务器速度并不是很快，仅仅比 GitHub 稍快，如果下载速度惨不忍睹或进度条肉眼不可见，可以尝试连接代理工具。</b>
+        <figure>
+            <img src="../../images/cpp0104.png" />
+            <small><br />图 4：肉眼不可见的速度</small>
+        </figure>
+        <h3 id="p22">第二步：让系统“看见”</h3>
+        <p>下载完后，你应该能见到一个不大的压缩包（实际大的一批）。将它解压，你将得到如图 5 所示的一个上百兆的神奇文件夹。</p>
+        <figure>
+            <img src="../../images/cpp0105.png" />
+            <small><br />图 5：内部别有一番天地</small>
+        </figure>
+        <p>接着，寻找一个你喜欢的文件夹，把它放进去。</p>
+        <figure>
+            <img src="../../images/cpp01m.png" />
+            <small><br /><del>图 6：喜欢的文件夹</del></small>
+            <img src="../../images/cpp0106.png" />
+            <small><br />图 6：喜欢的文件夹</small>
+        </figure>
+        <p>然后，我们需要配置环境变量。环境变量是什么呢？大致地说就是一本字典，让系统可以查阅重要信息而不是各种信息的杂糅。添加环境变量很简单，接下来请跟着我操作。</p>
+        <ol type="1">
+            <li>如图 7，在开始菜单中搜索“编辑系统环境变量”（<del>偷点懒也不是不行</del>），然后进入“系统属性”页面。</li>
+            <img src="../../images/cpp0107.png" />
+            <small><br />图 7：搜索“编辑系统环境变量”</small>
+            <li>如图 8，点击“环境变量”按钮并选择“系统变量”中的 Path。</li>
+            <img src="../../images/cpp0108.png" />
+            <small><br />图 8：系统环境变量</small>
+            <li>如图 9，双击进入“系统环境变量”并添加刚才你存储 MinGW-w64 地址的 bin
+                地址（<del>有点拗口</del>）。比如你刚才存储的地址为“D:\MinGW-w64”，则添加“D:\MinGW-w64\bin”。至此，系统环境变量添加完毕。</li>
+            <img src="../../images/cpp0109.png" />
+            <small><br />图 9：添加系统环境变量</small>
+        </ol>
+        <p>如果你害怕遇到错误，可以打开 cmd，并尝试如下代码。有输出即表示成功（如图 10）。</p>
+        <pre class="language-powershell">
+                <code>
+g++ -v
+               </code>
+        </pre>
+        <figure>
+            <img src="../../images/cpp0110.png" />
+            <small><br />图 10：应该出现的输出</small>
+        </figure>
+        <h3 id="p3">VS Code</h3>
+        <del>微软做过的唯一的善事</del>
+        <p>以下是关于它的介绍：</p>
+        <i style="color: #aaa;">“ Visual Studio Code（简称 VS Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件以扩展的方式支持语法高亮、代码自动补全（又称
+            IntelliSense）、代码重构功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装其他扩展以拓展软件功能。
+            <br /><br />
+            “在 2019 年的 Stack Overflow 组织的开发者调查中，Visual Studio Code 被认为是最受开发者欢迎的开发环境。据调查，87317名受访者中有 50.7% 的受访者声称正在使用
+            Visual Studio Code。”</i>
+        <p style="text-align: right;"><a href="https://zh.wikipedia.org/zh-cn/Visual_Studio_Code">—— 维基百科</a></p>
+        <p>看过以上的介绍，你应该会明白为何我推荐使用的文本编辑器是 VS Code。另外，VS Code 十分灵活，如果你需要学习前端三剑客有关知识，也可以使用它（它也是我最推荐的前端工具）。接下来，我会带领你安装 VS
+            Code。</p>
+        <b>Tips：接下来的步骤尽量使用科学上网环境，国内下载 VS Code 稳定版可能较慢，我将以其 Insiders 版本进行演示。</b>
+        <h3 id="p31">第一步：下载 VS Code</h3>
+        <p>由于 VS Code 稳定版国内也属于进度条不可见类型（貌似是绑在 GitHub 下的），但是，因为一些奇特的原因，Insiders 版本未被限速。所以，我们就可以<del>卡个 bug</del>运用这个特性，在
+            <a href="https://code.visualstudio.com/insiders/">https://code.visualstudio.com/insiders/</a> 下载 VS Code。
+        </p>
+        <figure>
+            <img src="../../images/cpp0111.png" />
+            <small><br />图 11：VS Code Insiders 官网</small>
+        </figure>
+        <p>这个网站的下载速度不能说很快，<del>只能说是极速</del>但是比 SourceForge 快一些，完成下载大约 2 分钟。如果你的电脑是微软老哥遗弃的系统或者 x86 的<del>垃圾</del>古董</p>
+    </div>
+
+    <script src="../../js/prism.js"></script>
+</body>
+
+</html>
