@@ -1,5 +1,5 @@
 @font-face {
-    font-family: Noto Serif;
+    font-family: Noto Sans;
     src: url("../fonts/NotoSansSC-Regular.ttf");
 }
 
@@ -8,7 +8,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     color: #ddd;
-    font-family: Noto Serif;
+    font-family: Noto Sans;
     font-size: large;
     line-height: 2.25;
     margin: 0;
@@ -43,7 +43,7 @@ img {
 
 .header {
     width: 200px;
-    height: calc(100vh);
+    height: 100vh;
     background-color: #2a2a2a;
     padding: 20px;
     position: fixed;
@@ -114,21 +114,21 @@ img {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     * {
-        font-size: 16px;
+        font-size: medium;
     }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 490px) {
     * {
-        font-size: 15px;
+        font-size: small;
     }
 }
 
-@media screen and (max-width: 385px)
+@media screen and (max-width: 425px)
 {
     * {
-        font-size: 14px;
+        font-size: 12px;
     }
 }

@@ -2,6 +2,11 @@
 https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+c+cpp+java+powershell */
 
 @font-face {
+    font-family: Noto Sans;
+    src: url("../fonts/NotoSansSC-Regular.ttf");
+}
+
+@font-face {
     font-family: JetBrains Mono;
     src: url("../fonts/JETBRAINSMONO-REGULAR.TTF");
 }
@@ -10,7 +15,7 @@ code[class*=language-],
 pre[class*=language-] {
     color: #ccc;
     background: 0 0;
-    font-family: JetBrains Mono;
+    font-family: JetBrains Mono, Noto Sans;
     font-size: 1em;
     text-align: left;
     white-space: pre;

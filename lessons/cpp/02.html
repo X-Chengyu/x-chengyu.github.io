@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chengyu の 博客 | C++ 第一课：开始吧！每个 C++ 新手的必听之课">
+    <title>C++ | Chengyu の 博客</title>
+    <link rel="icon" href="./icons/logo.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/prism.css">
+</head>
+
+<body>
+    <div class="ghost"></div>
+
+    <div class="header">
+        <a href="../../index.html">
+            <p style="font-size: larger">Chengyu の 博客</p>
+        </a>
+        <a href="../../welcome.html">概览</a>
+        <br />
+        <b> · </b>
+        <a href="../html/index.html">前端三剑客</a>
+        <br />
+        <b> · </b>
+        <a href="./index.html">C++</a>
+        <br />
+        <b> · </b>
+        <a href="../java/index.html">Java</a>
+        <p></p>
+    </div>
+    <div class="outer-block">
+        <h2>二 &nbsp; &nbsp;多变的性格</h2>
+        <i>「 変わりやすい性格 」</i>
+        <h3>目录</h3>
+        <ol type="1">
+            <li><a href="#1">定义变量</a></li>
+            <li><a href="#2">用户输入</a></li>
+        </ol>
+        <h3 id="1">定义变量</h3>
+        <p>相信在上节课安装完 C++ 编译器与 VS Code 之后，你一定尝试过用 C++ 输出一些有趣的信息。比如以下是我曾经写过的<del>智障小代码</del>含有对编程十分敬畏的代码：</p>
+        <pre class="language-cpp">
+            <code>
+#include &ltiostream>
+
+int main()
+{
+    std::cout << "原来这就是 C++ 啊！\n";
+    std::cout << "这真是太神奇了！";
+}
+            </code>
+        </pre>
+        <small>注：<code class="language-cpp">\n</code> 是换行符。</small>
+        <p>但是，你是否感到了一点无聊 —— 这一切都是人为定好的呀！尽管编程很有趣，但是枯燥无味的编程也是很难提起我们兴趣的。这个时候，一个能灵活改变的东西就出现了 —— 变量。</p>
+        <b>Tips：如果你以前接触过编程（<del>那你也不应该在这里</del>），你应该对其它语言的变量定义有所了解。但是，由于 C++ 的部分类型变量的定义比较骨骼精奇，建议基础不够强的朋友留步重新学习哦 ~</b>
+        <p>首先，我们需要认识 C++ 最基本的几种数据类型：</p>
+        <ol>
+            <li><code class="language-cpp">int</code>：整型，正极值约为 21.5 亿，负极值约为 -21.5 亿。</li>
+            <li><code class="language-cpp">long long</code>：长整型，正极值约为 9.2×10<sup>18</sup>，负极值约为 -9.2×10<sup>18</sup>。
+            </li>
+            <li><del><code class="language-cpp">short</code>短整型，正极值为 32767，负极值为 -32768。</del>（已被遗弃）</li>
+            <li><code class="language-cpp">float</code>：浮点型，保证 6 位小数精度，正极值约为 3.4×10<sup>38</sup>，负极值约为
+                -3.4×10<sup>38</sup>。</li>
+            <li><code class="language-cpp">double</code>：高精度浮点型，保证 15 位小数精度，正极值约为 1.79×10<sup>308</sup>，负极值约为
+                -1.79×10<sup>308</sup>。</li>
+            <li><code class="language-cpp">bool</code>：布尔型，只有 <code class="language-cpp">true</code>、<code
+                    class="language-cpp">false</code> 两种值。</li>
+            <li><code class="language-cpp">char</code>：字符型，可以存放仅占用单个字节的 ASCII 字符。</li>
+            <li><code class="language-cpp">unsigned</code>：无符号型，一般跟随其它数据类型使用，可以用于取消符号位，扩大正数极值。</li>
+            <li><code class="language-cpp">std::string</code>：字符串类，等价于字符数组，本身不属于数据类型，但十分常用。</li>
+        </ol>
+        <b>注意：浮点数正负极值虽大，但是不保证整型位精度，请勿投机取巧！</b>
+        <p>如果你记不住如上这么多数据类型，可以暂时只记住 <code class="language-cpp">int</code>、<code class="language-cpp">float</code>、<code
+                class="language-cpp">bool</code>、<code class="language-cpp">std::string</code> 四种比较常用的类型，其余类型我会在需要时提及。
+        </p>
+        <p>现在，让我来演示今天的正题：变量的定义。如下，</p>
+        <pre class="language-cpp">
+            <code>
+// 整型
+int Num = 5;
+long long llNum = 5e15;
+
+// 浮点型
+float fNum = 5.75;
+double dNum = 5e-10;
+
+// 布尔型
+bool Bool = true;
+
+// 字符型
+char Char = 'A';
+std::string Str = "Hello World!";
+            </code>
+        </pre>
+        <small>注：使用 <code class="language-cpp">std::string</code> 之前请先使用 <code
+                class="language-cpp">#include &ltiostream></code> 导入所需的头文件。</small>
+        <p>在定义完变量后，我们就需要理解变量的本质。变量之所以称之为变量，顾名思义，它肯定是会改变的量。而我们怎么改变它呢？很简单。下面我将以变量 <code class="language-cpp">Num</code>
+            作为范例，向你介绍改变变量的方法。</p>
+        <pre class="language-cpp">
+            <code>
+int Num = 5;      // 定义变量
+
+Num = 6;          // 重新赋值为 6
+Num = 1 + 1;      // 重新赋值为 2
+Num += 5;         // 增加 5
+Num++;            // 自增 1
+Num--;            // 自减 1
+
+std::cout << Num; // 输出 7
+            </code>
+        </pre>
+        <b>Tips：定义变量请尽可能以字母开头，请勿使用数字开头！变量名需要凸显出变量的含义与单位，比如 <code class="language-cpp">widthPx</code> 就是一个优秀的变量名。</b>
+        <p>学到这里，相信你已经对变量有了初步的了解。是时候让程序灵活起来了！来看看用户输入吧！</p>
+        <h3 id="2">用户输入</h3>
+        <p>截至目前为止，我们所有的操作都是输出操作 —— 没有用户输入。但是，用户输入其实是程序中极其重要的部分。所以，我们现在一起来学习程序中最重要的部分 —— 用户输入。</p>
+        <p>一般来说，用户输入使用 <code class="language-cpp">std::cin</code> 进行输入。以下是一个用于询问用户姓名和年龄并给予反馈的代码。</p>
+        <pre class="language-cpp">
+            <code>
+#include &ltiostream>
+
+int main()
+{
+    std::string name; // 姓名变量
+    int age;          // 年龄变量
+
+    std::cout << "请问你叫什么名字？";
+    std::cin >> name; // 获取姓名
+    std::cout << "你好！" << name;
+    std::cout << "\n请问你今年几岁了？";
+    std::cin >> age;  // 获取年龄
+    age++;            // 计算明年的年龄
+    std::cout << "你明年 " << age << " 岁。";
+
+    return 0;
+}
+            </code>
+        </pre>
+        <b>Tips：如果使用 VS Code 保存含有中文的 C++ 文档，请使用 GB 2312 保存以适应终端。</b>
+        <p>然后，十分简单地，你会得到<del>灵魂 2 问</del>2 个问题，当你回答完毕后，你就能分别得到两个看起来比较 low，实际一点也不高级的回复。这就是我们编程之路的第一站 —— 变量。</p>
+        <b>Tips：每个程序的效果请自行尝试，尽量动手敲代码，这样对学习编程更有效哦 ~</b>
+        <p>通过今天的课程，希望你对变量的定义和使用有了一些初步的了解。你也可以尝试自己写几个相关的程序，并尝试 <code class="language-cpp">+=</code>、<code
+                class="language-cpp">-=</code>、<code class="language-cpp">*=</code>、<code class="language-cpp">/=</code>
+            等操作。感谢你的学习，下次再见！</p>
+    </div>
+
+    <script src="../../js/prism.js"></script>
+</body>
+
+</html>
