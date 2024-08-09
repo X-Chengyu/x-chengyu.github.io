@@ -4,32 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="Chengyu, 博客, Blog, BlogSpot, C++, HTML, Java, 程序员, 爱好者, 程序员博客, 程序猿, 工程师, 攻城狮, x-chengyu.github.io, Chengyu 的博客, Chengyu の 博客, Chengyu's Blog">
-    <meta name="description" content="Chengyu の 博客 | 程序员全能博客！给每个编程爱好者的编程之书">
-    <title>首页 | Chengyu の 博客</title>
+    <meta name="description" content="Chengyu の 博客 | C++ 第一课：开始吧！每个 C++ 新手的必听之课">
+    <title>C++ | Chengyu の 博客</title>
     <link rel="icon" href="./icons/logo.png">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/prism.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/prism.css">
 </head>
 
 <body>
     <div class="ghost"></div>
 
     <div class="header">
-        <a href="index.html">
+        <a href="../../index.html">
             <p class="larger">Chengyu の 博客</p>
         </a>
-        <a href="./welcome">概览</a>
+        <a href="../../welcome">概览</a>
         <br />
         <b> · </b>
-        <a href="./lessons/html/">前端三剑客</a>
+        <a href="../html/index.html">前端三剑客</a>
         <br />
         <b> · </b>
-        <a href="./lessons/cpp/">C++</a>
+        <a href="./index.html">C++</a>
         <br />
         <b> · </b>
-        <a href="./lessons/java/">Java</a>
+        <a href="../java/index.html">Java</a>
         <p></p>
         <a href="https://github.com/X-Chengyu">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
@@ -44,16 +42,13 @@
         <a href="mailto:stormingchengyu@gmail.com"><img class="icon" src="../../icons/email.png" /></a>
         <p></p>
     </div>
-    <div id="back" class="outer-block">
-        <div class="block">
-            <div class="inner-block">
-                <h3>一言</h3>
-                <i id="quote" style="color: #aaa;"></i>
-            </div>
-        </div>
+    <div class="outer-block">
+        <h2>三 &nbsp; &nbsp;真 & 假</h2>
+        <i>「 真と偽 」</i>
+        <p>尚未完工哦 ~</p>
     </div>
 
-    <script src="../js/quotes.js"></script>
+    <script src="../../js/prism.js"></script>
 </body>
 
 </html>
