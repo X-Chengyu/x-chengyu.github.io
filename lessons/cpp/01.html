@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chengyu の 博客 | C++ 第一课：开始吧！每个 C++ 新手的必听之课">
+    <title>C++ | Chengyu の 博客</title>
+    <link rel="icon" href="./icons/logo.png">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/prism.css">
+</head>
+
+<body>
+    <div class="ghost"></div>
+
+    <div class="header">
+        <a href="../../index.html">
+            <p class="larger">Chengyu の 博客</p>
+        </a>
+        <a href="../../welcome">概览</a>
+        <br />
+        <b> · </b>
+        <a href="../html/index.html">前端三剑客</a>
+        <br />
+        <b> · </b>
+        <a href="./index.html">C++</a>
+        <br />
+        <b> · </b>
+        <a href="../java/index.html">Java</a>
+        <p></p>
+        <a href="https://github.com/X-Chengyu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16 0C7.16 0 0 7.16 0 16C0 23.08 4.58 29.06 10.94 31.18C11.74 31.32 12.04 30.84 12.04 30.42C12.04 30.04 12.02 28.78 12.02 27.44C8 28.18 6.96 26.46 6.64 25.56C6.46 25.1 5.68 23.68 5 23.3C4.44 23 3.64 22.26 4.98 22.24C6.24 22.22 7.14 23.4 7.44 23.88C8.88 26.3 11.18 25.62 12.1 25.2C12.24 24.16 12.66 23.46 13.12 23.06C9.56 22.66 5.84 21.28 5.84 15.16C5.84 13.42 6.46 11.98 7.48 10.86C7.32 10.46 6.76 8.82 7.64 6.62C7.64 6.62 8.98 6.2 12.04 8.26C13.32 7.9 14.68 7.72 16.04 7.72C17.4 7.72 18.76 7.9 20.04 8.26C23.1 6.18 24.44 6.62 24.44 6.62C25.32 8.82 24.76 10.46 24.6 10.86C25.62 11.98 26.24 13.4 26.24 15.16C26.24 21.3 22.5 22.66 18.94 23.06C19.52 23.56 20.02 24.52 20.02 26.02C20.02 28.16 20 29.88 20 30.42C20 30.84 20.3 31.34 21.1 31.18C27.42 29.06 32 23.06 32 16C32 7.16 24.84 0 16 0V0Z"
+                    fill="white" />
+            </svg>
+        </a>
+        &nbsp;
+        <a href="https://x.com/WdStorming"><img class="icon" src="../../icons/x-logo.png" /></a>
+        &nbsp;
+        <a href="mailto:stormingchengyu@gmail.com"><img class="icon" src="../../icons/email.png" /></a>
+        <p></p>
+    </div>
+    <div class="outer-block">
+        <h2>一 &nbsp; &nbsp;开始吧！</h2>
+        <i>「 始めよければ半ばよし 」</i>
+        <h3>目录</h3>
+        <ol type="1">
+            <li><a href="#p1">C++ 简介</a></li>
+            <li>
+                <a href="#p2">
+                    MinGW
+                    <ol type="1">
+                        <li><a href="#p21">下载 MinGW-w64</a></li>
+                        <li><a href="#p22">让系统“看见”</a></li>
+                    </ol>
+                </a>
+            </li>
+            <li>
+                <a href="#p3">
+                    VS Code
+                    <ol type="1">
+                        <li><a href="#p31">下载 VS Code</a></li>
+                        <li><a href="#p32">安装 VS Code</a></li>
+                        <li><a href="#p33">插件の世界</a></li>
+                    </ol>
+                </a>
+            </li>
+            <li>
+                <a href="#p4">
+                    初识 C++
+                    <ol type="1">
+                        <li><a href="#p41">代码解释</a></li>
+                    </ol>
+                </a>
+            </li>
+        </ol>
+        <h3 id="p1">C++ 简介</h3>
+        <blockquote>
+            <i style="color: #aaa;">“ C++
+                是一种被广泛使用的计算机程序设计语言。它是一种通用程序设计语言，支持多重编程范式，例如过程化程序设计、面向对象程序设计、泛型程序设计和函数式程序设计等。”</i>
+            <p style="text-align: right;"><a href="https://zh.wikipedia.org/zh-cn/C++">—— 维基百科</a></p>
+        </blockquote>
+        <p>C++ 是一种十分先进的编程语言。在接下来的课程中，你应该会接触到 C++ 大多数有趣的内容（<del>无趣的我都不会写</del>）。而在你正式开始使用 C++ 之前，你需要知道是，C++
+            编写的程序需要编译器进行编译后运行。所以，我们今天的任务就是 —— 装好编译器与文本编辑器。祝你顺利！</p>
+        <h3 id="p2">MinGW-w64</h3>
+        <p>这是 C++ 较为著名的编译器。为何我并不推荐使用 clang 和 MSVC 呢？因为<del>我也不会用</del>MinGW 的安装过程较为简便。</p>
+        <b>注意：初次安装请务必仔细跟随我的步伐，请勿私自操作！</b>
+        <h3 id="p21">第一步：下载 MinGW-w64</h3>
+        <b>Tips：如果你的电脑是 32 位系统，请自行搜索解决方案！</b>
+        <p>打开 SourceForge 中的 MinGW-w64</p>
+        <figure>
+            <img src="../../images/cpp0101.png" />
+            <small><br />图 1：注意不要选错</small>
+        </figure>
+        <p>如图 1，请选择“SourceForge”网站而非首位的官网（<del>官网看不懂</del>）。进入后，请按照图 2、图 3 所示，选择 Files 并下滑找到“MinGW-W64 GCC-8.1.0”字样。</p>
+        <figure>
+            <img src="../../images/cpp0102.png" />
+            <small><br />图 2：选择“Files”</small>
+            <p></p>
+            <img src="../../images/cpp0103.png" />
+            <small><br />图 3：下滑至“MinGW-W64 GCC-8.1.0”</small>
+        </figure>
+        <p>如果你的电脑比较新，选择“x86_64-win32-seh”，详细信息可以自行搜索。此处我将以“x86_64-win32-seh”为实例演示，其它版本大致相同。</p>
+        <b>Tips：SourceForge 的服务器速度并不是很快，仅仅比 GitHub 稍快，如果下载速度惨不忍睹或进度条肉眼不可见，可以尝试连接代理工具。</b>
+        <figure>
+            <img src="../../images/cpp0104.png" />
+            <small><br />图 4：肉眼不可见的速度</small>
+        </figure>
+        <h3 id="p22">第二步：让系统“看见”</h3>
+        <p>下载完后，你应该能见到一个不大的压缩包（实际大的一批）。将它解压，你将得到如图 5 所示的一个上百兆的神奇文件夹。</p>
+        <figure>
+            <img src="../../images/cpp0105.png" />
+            <small><br />图 5：内部别有一番天地</small>
+        </figure>
+        <p>接着，寻找一个你喜欢的文件夹，把它放进去。</p>
+        <figure>
+            <img src="../../images/cpp01m.png" />
+            <small><del><br />图 6：喜欢的文件夹</del></small>
+            <p></p>
+            <img src="../../images/cpp0106.png" />
+            <small><br />图 6：喜欢的文件夹</small>
+        </figure>
+        <p>然后，我们需要配置环境变量。环境变量是什么呢？大致地说就是一本字典，让系统可以查阅重要信息而不是各种信息的杂糅。添加环境变量很简单，接下来请跟着我操作。</p>
+        <ol type="1">
+            <li>如图 7，在开始菜单中搜索“编辑系统环境变量”（<del>偷点懒也不是不行</del>），然后进入“系统属性”页面。</li>
+            <img src="../../images/cpp0107.png" />
+            <small><br />图 7：搜索“编辑系统环境变量”</small>
+            <li>如图 8，点击“环境变量”按钮并选择“系统变量”中的 Path。</li>
+            <img src="../../images/cpp0108.png" />
+            <small><br />图 8：系统环境变量</small>
+            <li>如图 9，双击进入“系统环境变量”并添加刚才你存储 MinGW-w64 地址的 bin
+                地址（<del>有点拗口</del>）。比如你刚才存储的地址为“D:\MinGW-w64”，则添加“D:\MinGW-w64\bin”。至此，系统环境变量添加完毕。</li>
+            <img src="../../images/cpp0109.png" />
+            <small><br />图 9：添加系统环境变量</small>
+        </ol>
+        <p>如果你害怕遇到错误，可以打开 cmd，并尝试如下代码。有输出即表示成功（如图 10）。</p>
+        <pre class="language-powershell">
+                <code>
+g++ -v
+               </code>
+        </pre>
+        <figure>
+            <img src="../../images/cpp0110.png" />
+            <small><br />图 10：应该出现的输出</small>
+        </figure>
+        <h3 id="p3">VS Code</h3>
+        <del>微软做过的唯一的善事</del>
+        <p>以下是关于它的介绍：</p>
+        <blockquote>
+            <i style="color: #aaa;">“ Visual Studio Code（简称 VS Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件以扩展的方式支持语法高亮、代码自动补全（又称
+                IntelliSense）、代码重构功能，并且内置了命令行工具和 Git 版本控制系统。用户可以更改主题和键盘快捷方式实现个性化设置，也可以通过内置的扩展程序商店安装其他扩展以拓展软件功能。
+                <br /><br />
+                “在 2019 年的 Stack Overflow 组织的开发者调查中，Visual Studio Code 被认为是最受开发者欢迎的开发环境。据调查，87317名受访者中有 50.7% 的受访者声称正在使用
+                Visual Studio Code。”</i>
+            <p style="text-align: right;"><a href="https://zh.wikipedia.org/zh-cn/Visual_Studio_Code">—— 维基百科</a></p>
+        </blockquote>
+        <p>看过以上的介绍，你应该会明白为何我推荐使用的文本编辑器是 VS Code。另外，VS Code 十分灵活，如果你需要学习前端三剑客有关知识，也可以使用它（它也是我最推荐的前端工具）。接下来，我会带领你安装 VS
+            Code。</p>
+        <b>Tips：接下来的步骤尽量使用科学上网环境，国内下载 VS Code 稳定版可能较慢，我将以其 Insiders 版本进行演示。</b>
+        <h3 id="p31">第一步：下载 VS Code</h3>
+        <p>由于 VS Code 稳定版国内也属于进度条不可见类型（貌似是绑在 GitHub 下的），但是，因为一些奇特的原因，Insiders 版本未被限速。所以，我们就可以<del>卡个 bug</del>运用这个特性，在
+            <a href="https://code.visualstudio.com/insiders/">https://code.visualstudio.com/insiders/</a> 下载 VS Code。
+        </p>
+        <figure>
+            <img src="../../images/cpp0111.png" />
+            <small><br />图 11：VS Code Insiders 官网</small>
+        </figure>
+        <p>这个网站的下载速度不能说很快，<del>只能说是极速</del>但是比 SourceForge 快一些，完成下载大约 2 分钟。如果你的电脑是微软老哥遗弃的系统或者 x86
+            的<del>垃圾</del>古董，可能需要下载 1.7 版本。具体链接请自行搜索。</p>
+        <p>在一点也不漫长的等待后，你一定会像图 12 一样绿色的<del>一坨</del>图标。这就是 VS Code 的图标。</p>
+        <figure>
+            <img src="../../images/cpp0112.png" />
+            <small><br />图 12：左为 VS Code Insiders。图源：<a
+                    href="https://code.visualstudio.com/opengraphimg/opengraph-home-insiders.png">微软</a></small>
+        </figure>
+        <h3 id="p32">第二步：安装 VS Code</h3>
+        <p>安装安装包（<del>绕口令吧这是</del>），然后你就可以欣赏一个美丽的 …… 纯英文界面。</p>
+        <p>此处，我就不得不提到一句美妙的名言了：</p>
+        <blockquote>
+            <i style="color: #aaa;">“当一种能够让程序员通过简单的英语来编程的编程语言诞生后，你会发现程序员们都不会说英语。”</i>
+        </blockquote>
+        <p>。。。</p>
+        <p>好吧，所以安装中文插件也是程序员的必备技能。如图 13 所示，你就能安装中文插件啦 ~</p>
+        <figure>
+            <img src="../../images/cpp0113.png" />
+            <small><br />图 13：安装中文插件</small>
+        </figure>
+        <h3 id="p33">第三步：插件の世界</h3>
+        <p>知周所众，VS Code 举世闻名的原因就是因为它遥遥领先的插件系统。一般来说，我们会选用带有蓝勾的开发者开发的，因为他（她/<del>它</del>）们都是经过微软官方认证的开发者，一般插件质量是有保证的。</p>
+        <p>现在，请按照安装中文语言插件的方法依次安装图 14 中的几个 C++ 插件。</p>
+        <figure>
+            <img src="../../images/cpp0114.png" />
+            <small><br />图 14：一些必须安装的插件</small>
+        </figure>
+        <p>VS Code 的主题我比较推荐 GitHub Theme 套装。总体使用体验优。值得一试。</p>
+        <figure>
+            <img src="../../images/cpp0115.png" />
+            <small><br />图 15：GitHub Theme。图源：<a
+                    href="https://user-images.githubusercontent.com/378023/132220037-3cd3e777-55a6-445f-9a2e-da6020ebd78d.png">微软</a></small>
+        </figure>
+        <h3 id="p4">初识 C++</h3>
+        <p>这样，我们就完成了 VS Code 的安装。不过，今天的任务还没结束。还记得概览中的代码吗？把它粘贴到 VS Code 中吧！如果你忘记了，可以从以下复制哦 ~ 👇</p>
+        <pre class="language-cpp">
+            <code>
+#include &ltiostream>
+
+int main()
+{
+    std::cout << "Hello World!";
+
+    return 0;
+}
+           </code>
+        </pre>
+        <p>将此保存到一个随便的地方（建议在 MinGW-w64 附近），然后如图 16 所示，先点击三角形“运行”按钮，再选择第二项：g++（此处需要注意不要选错成 gcc）。然后，你的第一个程序就会开始运转咯 ~</p>
+        <figure>
+            <img src="../../images/cpp0116.png" />
+            <small><br />图 16：注意选择 g++ 而非 gcc</small>
+        </figure>
+        <p>运行并看到一串调试内容后，如果你进入“终端”标签页，就能看到一串复杂的指令和输出（你也可以用下方的代码来自行生成）。其中“Hello World”就是我们期望得到的输出啦 ~</p>
+        <pre class="language-powershell">
+            <code>
+PS D:\> g++ 文件名.cpp -o 文件名.exe
+PS D:\> .\文件名.exe
+Hello World!
+            </code>
+        </pre>
+        <h3 id="p41">代码解释</h3>
+        <p>首先，第一行代码“<code class="language-cpp">#include &ltiostream></code>”可以分解为 2 部分：<code
+                class="language-cpp">#include</code> 和 <code class="language-cpp">&ltiostream></code>。如果你的英文还好 ……
+            至少不像那句名言所述，那你应该知道，include
+            意为“包含”，<code class="language-cpp">&ltiostream></code> 不难可知意思类似一本名叫《输入输出流》的书。事实也确实如此。尖括号中内容在编程中的学名为<b
+                style="text-decoration: underline dotted;">头文件</b>。所以，通俗的说，这句话的意思就类似给了 g++ 一本专业字典，然后任其查阅。</p>
+        <p>然后，我们看之后的几行。“<code class="language-cpp">int main()</code>”的意思也很好理解 —— 定义主函数。C++ 的所有“动作”都必须写在函数中，而<b
+                style="text-decoration: underline dotted;">默认运行的函数就称为主函数</b>。所以，我们只需要观察内部的内容就行。</p>
+        <p><code class="language-cpp">std::cout << "Hello World!"</code> 是通过标准命名空间（standard namespace）调用 iostream
+            的类以及重载函数 <code class="language-cpp"><<</code> 实现的。关于什么是重载函数我们以后再聊。</p>
+        <p>最后，<code class="language-cpp">return 0</code>，意为返回值 0。由于我们的函数设置为整形（int），所以我们需要返回整型值。一般来说，返回值为 0
+            才表示主函数顺利结束（其它函数可以拥有其它返回值）。</p>
+        <p>经过我今天比较仓促的讲解，希望你对 C++ 已经有了比较初步的了解。加油！希望你能继续学下去哦 ~</p>
+    </div>
+
+    <script src="../../js/prism.js"></script>
+</body>
+
+</html>
